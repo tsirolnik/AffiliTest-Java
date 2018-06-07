@@ -18,13 +18,13 @@ Note: We use Google's Gson library (We used 2.6.2). We provide it but it can be 
 
 
 ### Testing
-[Example Code](src/ExampleTesting.java)
+[Example Code](AffiliTest-API/test/examples/ExampleTesting.java)
 
 ### App Info
-[Example Code](src/ExampleAppInfo.java)
+[Example Code](AffiliTest-API/test/examples/ExampleAppInfo.java)
 
 ### Calls Left
-[Example Code](src/ExampleCallsLeft.java)
+[Example Code](AffiliTest-API/test/examples/ExampleCallsLeft.java)
 
 ### Retrieving HTTP Status codes
   In order to view the redirections' status codes, a query string is needed to be appended to the endpoints.
