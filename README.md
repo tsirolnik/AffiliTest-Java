@@ -29,7 +29,7 @@ Note: We use Google's Gson library (We used 2.6.2). We provide it but it can be 
 ### Retrieving HTTP Status codes
   In order to view the redirections' status codes, a query string is needed to be appended to the endpoints.
 
-  Open the [API.php](src/Endpoints.java) file and append `?codes` to the desired endpoint.
+  Open the [API.php](AffiliTest-API/src/affilitest/Endpoints.java) file and append `?codes` to the desired endpoint.
 
   Currently, only `/test` and `/compareToPreview` are the ones which support this feature.
 
