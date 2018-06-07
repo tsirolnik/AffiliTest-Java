@@ -1,12 +1,25 @@
-public class ExampleTesting {
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package examples;
 
-    public static void main(String[] args) {
+import affilitest.AffiliTestAPI;
+import affilitest.Devices;
+
+/**
+ *
+ * @author debian
+ */
+public class ExampleTesting {
+       public static void main(String[] args) {
         AffiliTestAPI api = new AffiliTestAPI();
         // Another option is to use the API key, which is the preferable way
         // AffiliTestAPI api = new AffiliTestAPI(<api_key>);
 
         try {
-            api.login("mail@example.com", "password");
+             System.out.println(api.login("mail@example.com", "password"));
 
             // Perform a regular test
             System.out.println(api.test(
@@ -29,5 +42,4 @@ public class ExampleTesting {
             e.printStackTrace();
         }
     }
-
 }

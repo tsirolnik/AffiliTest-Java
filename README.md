@@ -3,9 +3,16 @@ AffiliTest's API implemented in Java
 
 
 ## Installation
-We provide this API as is, not in a form of a JAR file.
 
-You will need to download Google's Gson library. It can be found [here](https://repo1.maven.org/maven2/com/google/code/gson/gson/2.6.2/).
+The API is provided via a JAR file.
+
+Download [here](release/AffiliTest-API.jar)
+
+* Clone this repo with `git clone https://github.com/tsirolnik/AffiliTest-Java.git`
+* Open the project, under the AffiliTest folder with Netbeans IDE
+* Run or use it as your wish
+
+Note: We use Google's Gson library (We used 2.6.2). We provide it but it can be found [here](https://repo1.maven.org/maven2/com/google/code/gson/gson/2.6.2/gson-2.6.2.jar).
 
 ## Examples
 

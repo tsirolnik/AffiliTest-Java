@@ -1,13 +1,33 @@
-import com.google.gson.*;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package affilitest;
 
-import javax.net.ssl.HttpsURLConnection;
-import java.io.*;
-import java.net.*;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
+import java.net.CookieHandler;
+import java.net.CookieManager;
+import java.net.URL;
+import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Map;
+import javax.net.ssl.HttpsURLConnection;
 
+/**
+ *
+ * @author debian
+ */
 public class AffiliTestAPI {
-
+    
     private String apiKey;
 
     public AffiliTestAPI(String apiKey) {
@@ -118,10 +138,15 @@ public class AffiliTestAPI {
         return conn;
     }
 
-    private String getResponseBody(HttpsURLConnection conn) throws IOException {
+    private String getResponseBody(HttpsURLConnection httpConnection) throws IOException {
         String responseBody = "", responseLine;
-        BufferedReader br=new BufferedReader(new InputStreamReader(conn.getInputStream()));
-        while ((responseLine=br.readLine()) != null) {
+        BufferedReader bufferedReader;
+        if (200 <= httpConnection.getResponseCode() && httpConnection.getResponseCode() <= 299) {
+            bufferedReader = new BufferedReader(new InputStreamReader(httpConnection.getInputStream()));
+        } else {
+            bufferedReader = new BufferedReader(new InputStreamReader(httpConnection.getErrorStream()));
+        }
+        while ((responseLine=bufferedReader.readLine()) != null) {
             responseBody += responseLine;
         }
         return responseBody;
