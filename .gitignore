@@ -11,7 +11,7 @@
 .mtj.tmp/
 
 # Package Files #
-*.jar
+AffiliTest-API/*.jar
 *.war
 *.ear
 *.zip
@@ -23,3 +23,9 @@ hs_err_pid*
 out/
 .idea/
 *.iml
+/AffiliTest/nbproject/private/
+/AffiliTest/dist/
+/AffiliTest/build/
+/AffiliTest-API/build/
+/AffiliTest-API/nbproject/private/
+/AffiliTest-API/dist/
