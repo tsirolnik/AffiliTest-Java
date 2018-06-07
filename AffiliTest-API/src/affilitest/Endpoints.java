@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package affilitest;
 
-/**
- *
- * @author debian
- */
 public class Endpoints {
     public static final String SITE_BASE = "https://affilitest.com/";
     public static final String API_BASE = SITE_BASE + "api/v1/";
